@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Live Chat</title>
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-green-200 px-6 py-4 flex items-center">
+        <a href="index.html" class="mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </a>
+        <h1 class="text-xl font-bold text-gray-900">Live Chat</h1>
+        <button class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Chat Section -->
+    <main class="flex-1 overflow-y-auto px-4 py-4">
+        <!-- Chat Bubble -->
+        <div class="mb-4">
+            <p class="text-gray-800 text-sm bg-gray-200 px-4 py-2 rounded-lg w-max">Halo admin, saya ada keluhan tidak
+                bisa login.</p>
+            <img src="assets/images/live-chat.png" alt="Attachment" class="mt-2 w-32 rounded-lg">
+        </div>
+
+        <!-- Admin Reply -->
+        <div class="mb-4 flex justify-end">
+            <div class="text-right">
+                <p class="text-white text-sm bg-green-600 px-4 py-2 rounded-lg w-max">Hai Kak, silahkan ubah password
+                    Anda.</p>
+            </div>
+        </div>
+
+        <!-- User Reply -->
+        <div class="mb-4">
+            <p class="text-gray-800 text-sm bg-gray-200 px-4 py-2 rounded-lg w-max">Oke, terima kasih.</p>
+        </div>
+    </main>
+
+    <!-- Footer Chat Input -->
+    <footer class="bg-white px-4 py-2 flex items-center gap-2 border-t">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 16v-1a2 2 0 012-2h3m4 0h3a2 2 0 012 2v1M4 16v4a2 2 0 002 2h12a2 2 0 002-2v-4M10 12v4m4-4v4m4-4h-8m8 0H6m12 0a2 2 0 012 2m-6 0v4M6 20a2 2 0 01-2-2v-4M6 12h12" />
+            </svg>
+        </button>
+        <input type="text" placeholder="Ketik pesan..."
+            class="flex-1 p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+    </footer>
+
+</body>
+
+</html>

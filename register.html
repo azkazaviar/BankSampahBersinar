@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Form Registrasi</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <!-- Registration Form -->
+    <div class="bg-green-200 rounded-lg shadow-lg w-full max-w-md px-6 py-8">
+        <div class="text-center mb-6">
+            <img src="assets/images/logo.png" alt="Logo Bank Sampah" class="h-16 mx-auto mb-4">
+            <h1 class="text-2xl font-bold text-green-800">REGISTRASI</h1>
+        </div>
+
+        <!-- Form Start -->
+        <form action="#" method="POST">
+            <!-- Nama -->
+            <div class="mb-4">
+                <label for="nama" class="block text-sm font-medium text-green-900">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+            <!-- Username -->
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-green-900">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-green-900">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+            <!-- Password -->
+            <div class="mb-4 relative">
+                <label for="password" class="block text-sm font-medium text-green-900">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                <button type="button" class="absolute right-3 top-9">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.01.326-.042.648-.096.965M15 12a3 3 0 11-6 0 3 3 0 016 0zm5.174 4.417C18.942 19.382 15.605 21 12 21c-3.605 0-6.942-1.618-8.174-4.583M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.01.326-.042.648-.096.965" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Kode Verifikasi -->
+            <div class="mb-4">
+                <label for="kode" class="block text-sm font-medium text-green-900">Kode Verifikasi</label>
+
+                <!-- Pilihan Kode Verifikasi -->
+                <select id="pilihan-kode" name="pilihan-kode"
+                    class="mt-2 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    <option value="" disabled selected>Pilih jenis kode verifikasi</option>
+                    <option value="tanggal-lahir">Tanggal Lahir</option>
+                    <option value="nama-ibu">Nama Ibu</option>
+                    <option value="nama-hewan">Nama Hewan</option>
+                    <option value="nama-pasangan">Nama Pasangan</option>
+                    <option value="nama-kantor">Nama Kantor</option>
+                    <option value="tempat-lahir">Tempat Lahir</option>
+                </select>
+
+                <!-- Input Text untuk Pilihan Kode Verifikasi -->
+                <input type="text" id="input-kode" name="input-kode" placeholder="Masukkan jawaban Anda"
+                    class="mt-2 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+
+            <!-- Password Requirement -->
+            <p class="text-sm text-red-600 mb-2">*Menggunakan kombinasi huruf besar dan kecil, angka, dan simbol khusus.
+            </p>
+
+            <!-- Agreement -->
+            <div class="mb-6 flex items-center">
+                <input type="checkbox" id="agreement" name="agreement"
+                    class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                <label for="agreement" class="ml-2 text-sm text-green-900">Saya setuju untuk menjadi nasabah Bank Sampah
+                    Bersinar</label>
+            </div>
+
+            <!-- Submit Button -->
+            <a href="login.html" type="submit"
+                class="w-full flex justify-center bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800">
+                DAFTAR
+            </a>
+        </form>
+        <!-- Form End -->
+    </div>
+
+</body>
+
+</html>

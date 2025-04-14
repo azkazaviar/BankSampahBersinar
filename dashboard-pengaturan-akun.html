@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pengaturan Akun</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-yellow-200 px-6 py-4 flex items-center">
+        <a href="dashboard.html" class="mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </a>
+        <h1 class="text-xl font-bold text-gray-900">Pengaturan Akun</h1>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="bg-yellow-100 px-6 py-4 flex items-center">
+        <div>
+            <h2 class="text-lg font-bold text-gray-900">Hai Tasya,</h2>
+            <p class="text-sm text-gray-700">Ayo segera update Akunmu!</p>
+        </div>
+        <div class="ml-auto bg-green-200 p-4 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-700" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 11c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <main class="px-6 py-6">
+        <form action="#" method="POST" class="space-y-4">
+            <!-- Nama -->
+            <div>
+                <label for="nama" class="block text-sm font-medium text-gray-900">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+            <!-- Alamat Lengkap -->
+            <div>
+                <label for="alamat" class="block text-sm font-medium text-gray-900">Alamat Lengkap</label>
+                <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Lengkap"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"></textarea>
+            </div>
+
+            <!-- No. HP -->
+            <div>
+                <label for="hp" class="block text-sm font-medium text-gray-900">No. HP</label>
+                <input type="text" id="hp" name="hp" placeholder="Masukkan No. HP"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+            <!-- Transfer Tabungan Sampah -->
+            <div>
+                <label for="rekening" class="block text-sm font-medium text-gray-900">Transfer Tabungan Sampah</label>
+                <div class="relative mt-1">
+                    <select id="rekening" name="rekening"
+                        class="block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                        <option value="" disabled selected>Pilih Bank atau Layanan</option>
+                        <option value="bni">BNI</option>
+                        <option value="bni-pandai">BNI Pandai (BSB)</option>
+                        <option value="dana">DANA</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- Ubah Kata Sandi -->
+            <div class="relative">
+                <label for="password" class="block text-sm font-medium text-gray-900">Ubah Kata Sandi</label>
+                <input type="password" id="password" name="password" placeholder="Kata Sandi Baru"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                <button type="button" class="absolute right-3 top-9">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.01.326-.042.648-.096.965M15 12a3 3 0 11-6 0 3 3 0 016 0zm5.174 4.417C18.942 19.382 15.605 21 12 21c-3.605 0-6.942-1.618-8.174-4.583M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.01.326-.042.648-.096.965" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Ubah Kode Verifikasi -->
+            <div>
+                <label for="kode-verifikasi" class="block text-sm font-medium text-gray-900">Ubah Kode
+                    Verifikasi</label>
+                <div class="relative mt-1">
+                    <select id="kode-verifikasi" name="kode-verifikasi"
+                        class="block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                        <option value="" disabled selected>Pilih Jenis Kode Verifikasi</option>
+                        <option value="tanggal-lahir">Tanggal Lahir</option>
+                        <option value="nama-ibu-ayah">Nama Ibu / Ayah</option>
+                        <option value="nama-hewan">Nama Hewan</option>
+                        <option value="nama-pasangan">Nama Pasangan</option>
+                        <option value="nama-kantor">Nama Kantor</option>
+                        <option value="tempat-lahir">Tempat Lahir</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <button type="button" id="submitButton"
+                class="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800">
+                Submit
+            </button>
+        </form>
+    </main>
+
+    <!-- Modal -->
+    <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-sm p-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 text-center">Akun Anda berhasil diperbarui</h2>
+            <button id="okButton" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const modal = document.getElementById('successModal');
+        const submitButton = document.getElementById('submitButton');
+        const okButton = document.getElementById('okButton');
+
+        // Show Modal on Submit
+        submitButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        // Redirect to Dashboard
+        okButton.addEventListener('click', () => {
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+
+</body>
+
+</html>

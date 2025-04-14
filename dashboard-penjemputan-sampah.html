@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Penjemputan Sampah</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-yellow-200 px-6 py-4 flex items-center">
+        <a href="dashboard.html" class="mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </a>
+        <h1 class="text-xl font-bold text-gray-900">Penjemputan Sampah</h1>
+    </header>
+
+    <!-- Form Section -->
+    <main class="px-6 py-6">
+        <form action="#" method="POST" class="space-y-4">
+            <!-- Nama -->
+            <div>
+                <label for="nama" class="block text-sm font-medium text-gray-900">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            </div>
+
+            <!-- Kategori Sampah -->
+            <div>
+                <label for="kategori" class="block text-sm font-medium text-gray-900">Kategori Sampah</label>
+                <select id="kategori" name="kategori"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    <option value="plastik">Plastik</option>
+                    <option value="kertas">Kertas</option>
+                    <option value="logam">Logam</option>
+                    <option value="organik">Organik</option>
+                </select>
+            </div>
+
+            <!-- Berat Sampah & Harga -->
+            <div class="flex justify-between items-center">
+                <div class="w-1/2 pr-2">
+                    <label for="berat" class="block text-sm font-medium text-gray-900">Berat Sampah/kg</label>
+                    <input type="text" id="berat" name="berat" placeholder="1kg"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                </div>
+                <div class="w-1/2 pl-2">
+                    <label for="harga" class="block text-sm font-medium text-gray-900">Harga/kg</label>
+                    <input type="text" id="harga" name="harga" placeholder="Rp. 1000"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                </div>
+            </div>
+
+            <!-- Tanggal Penjemputan -->
+            <div>
+                <label for="tanggal" class="block text-sm font-medium text-gray-900">Tanggal Penjemputan</label>
+                <div class="relative">
+                    <input type="text" id="tanggal" name="tanggal" placeholder="Pilih tanggal"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    <div class="absolute right-3 top-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-8 0h8M4 11h16M4 15h16M4 19h16" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Alamat Lengkap -->
+            <div>
+                <label for="alamat" class="block text-sm font-medium text-gray-900">Alamat Lengkap</label>
+                <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Lengkap"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"></textarea>
+                <div class="flex items-center mt-2">
+                    <input type="checkbox" id="alamat-nasabah" name="alamat-nasabah"
+                        class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="alamat-nasabah" class="ml-2 text-sm text-gray-700">Alamat Nasabah</label>
+                </div>
+            </div>
+
+            <!-- Kirim Gambar Sampah -->
+            <div>
+                <label for="gambar" class="block text-sm font-medium text-gray-900">Kirim Gambar Sampah</label>
+                <div class="relative mt-1">
+                    <input type="file" id="gambar" name="gambar" accept="image/*"
+                        class="block w-full text-sm text-dark bg-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold  ">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" id="submitButton"
+                class="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800">
+                Jemput Sekarang
+            </button>
+        </form>
+    </main>
+
+
+    <!-- Modal Kode Verifikasi -->
+    <div id="verificationModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-sm p-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 text-center">Kode Verifikasi</h2>
+            <input type="password" placeholder="Masukkan Kode Verifikasi"
+                class="block w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 mb-4">
+            <div class="flex justify-end gap-2">
+                <button id="cancelButton" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400">
+                    Cancel
+                </button>
+                <button id="verifyButton" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pesan Sukses -->
+    <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-sm p-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 text-center">Pesanan Berhasil, Silahkan Menunggu!</h2>
+            <button id="successButton" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initialize Flatpickr
+        flatpickr("#tanggal", {
+            dateFormat: "d/m/Y",
+            altInput: true,
+            altFormat: "F j, Y",
+            minDate: "today", // Disable past dates
+        });
+
+        const verificationModal = document.getElementById('verificationModal');
+        const successModal = document.getElementById('successModal');
+        const submitButton = document.getElementById('submitButton');
+        const cancelButton = document.getElementById('cancelButton');
+        const verifyButton = document.getElementById('verifyButton');
+        const successButton = document.getElementById('successButton');
+
+        // Show Verification Modal on Submit
+        submitButton.addEventListener('click', () => {
+            verificationModal.classList.remove('hidden');
+        });
+
+        // Cancel Verification Modal
+        cancelButton.addEventListener('click', () => {
+            verificationModal.classList.add('hidden');
+        });
+
+        // Show Success Modal on Verify
+        verifyButton.addEventListener('click', () => {
+            verificationModal.classList.add('hidden');
+            successModal.classList.remove('hidden');
+        });
+
+        // Redirect to Dashboard
+        successButton.addEventListener('click', () => {
+            window.location.href = 'dashboard.html';
+        });
+
+    </script>
+</body>
+
+</html>
